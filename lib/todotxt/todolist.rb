@@ -23,6 +23,7 @@ module Todotxt
 
     def add str
       todo = Todo.new str, (@line += 1)
+      todo.set_created_date
       @todos.push todo
       @todos.sort!
 
